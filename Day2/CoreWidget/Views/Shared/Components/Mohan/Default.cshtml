@@ -1,0 +1,19 @@
+@using ViewComponents.Mohan;
+@using Progress.Sitefinity.RestSdk;
+@using Progress.Sitefinity.RestSdk.Dto;
+
+@inject IRestClient RestClient
+
+@model MohanEntity
+
+<h1>@Model.Message</h1>
+<h1>@Model.MyNumber</h1>
+<h1>@Model.MyDateTime</h1>
+
+@{
+    var id = Model.Images.ItemIdsOrdered.FirstOrDefault();
+    var imgDto = await RestClient.GetItem<ImageDto>(id);
+
+}
+
+<img src="@imgDto.Url" alt="@imgDto.Title" width=200 width=200/>
