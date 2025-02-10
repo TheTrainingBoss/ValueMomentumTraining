@@ -1,0 +1,20 @@
+@* This file demonstrate the use of IResClient and the DTOs of Sitefinity entities *@
+
+@using ViewComponents.ExperimentWidget;
+@using Progress.Sitefinity.RestSdk;
+@using Progress.Sitefinity.RestSdk.Dto;
+
+@inject IRestClient RestClient
+
+@model ExperimentWidgetEntity
+
+<h1>@Model.Message</h1>
+<h1>@Model.MyNumber</h1>
+<h1>@Model.MyDateTime</h1>
+@{
+    var id = Model.Images.ItemIdsOrdered.FirstOrDefault();
+    var imgDto = await RestClient.GetItem<ImageDto>(id);
+
+}
+<img src="@imgDto.Url" alt="@imgDto.Title" width=200 width=200/>
+
