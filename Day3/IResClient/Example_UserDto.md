@@ -1,0 +1,1 @@
+[User DTO Example](https://community.progress.com/s/article/How-to-retrieve-Sitefinity-users-in-NET-Core)

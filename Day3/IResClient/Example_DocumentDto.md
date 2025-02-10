@@ -1,0 +1,1 @@
+[Document DTO Example](https://community.progress.com/s/question/0D5Pb00001c6LhkKAE/renderer-how-to-select-uploaded-document-dynamically-on-restclientcreateitem)
